@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -299,11 +299,13 @@
     .timeline-body li { margin-bottom: .75rem; color: var(--muted-strong); }
     .timeline-body ul { padding-left: 1.2rem; }
 
-    .project-card { padding: 1.75rem; }
+    .project-card { padding: 1.75rem; display: flex; flex-direction: column; }
     .project-label { display: inline-block; font-size: .72rem; text-transform: uppercase; letter-spacing: .16em; color: var(--accent); margin-bottom: .85rem; }
     .project-title { font-size: 1.35rem; margin-bottom: .8rem; }
-    .project-desc { color: var(--muted-strong); margin-bottom: 1rem; }
-    .project-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
+    .project-desc { color: var(--muted-strong); margin-bottom: 0.75rem; }
+    .project-bullets { margin: 0 0 1.2rem 1.2rem; padding: 0; color: var(--muted-strong); font-size: 0.88rem; flex-grow: 1; }
+    .project-bullets li { margin-bottom: 0.4rem; line-height: 1.5; }
+    .project-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; margin-top: auto; }
     .project-tag { padding: .5rem .85rem; border-radius: 999px; background: rgba(62,244,234,.08); color: var(--text); font-size: .83rem; }
     .project-link { display: inline-flex; align-items: center; gap: .5rem; color: var(--accent); font-weight: 600; }
 
@@ -316,8 +318,9 @@
     .achievement-card { padding: 1.4rem; }
     .achievement-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; gap: 1rem; }
     .achievement-title { font-size: 1rem; }
-    .achievement-org { color: var(--muted); font-size: .9rem; }
     .achievement-date { color: var(--accent); font-family: var(--font-heading); font-size: .82rem; }
+    .certificate-link { display: inline-flex; align-items: center; gap: .4rem; font-size: .8rem; color: var(--accent); margin-top: .85rem; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
+    .certificate-link:hover { text-decoration: underline; }
 
     .language-card { padding: 1.4rem; }
     .language-name { display: flex; justify-content: space-between; margin-bottom: .8rem; color: var(--text); font-weight: 500; }
@@ -426,13 +429,10 @@
       <div class="about-grid">
         <div class="about-text-wrap reveal reveal-d1">
           <p>
-            I’m a B.Tech Computer Science student at Amity University Haryana. My focus is designing scalable applications,
-            securing networks, and applying AI to deliver intelligent experiences. I enjoy solving complex problems, collaborating
-            across teams, and shipping work that feels polished and dependable.
+            I am a B.Tech Final Year Computer Science student at Amity University Haryana (graduating 2027) with hands-on experience in Full Stack Development, AI/ML, and Cybersecurity. I have a proven track record of shipping production-grade applications, including a bulk-mailing platform that delivered 1,000+ emails and a SaaS student toolkit supporting over 100 active users.
           </p>
           <p>
-            My current learning path includes advanced cybersecurity concepts, AI models, and software architecture for modern
-            web ecosystems. I bring both practical execution and a strong foundation in systems thinking.
+            Proficient in React.js, Node.js, Express.js, PostgreSQL, and Python, I am passionate about building scalable, user-centric software, securing systems, and solving complex real-world problems.
           </p>
           <div class="stats-grid">
             <div class="stat-card">
@@ -444,7 +444,7 @@
               <div class="stat-label">Internship programs</div>
             </div>
             <div class="stat-card">
-              <div class="stat-value">4</div>
+              <div class="stat-value">5</div>
               <div class="stat-label">Certifications earned</div>
             </div>
             <div class="stat-card">
@@ -474,49 +474,53 @@
         <div class="skill-card card reveal reveal-d2">
           <h3 class="skill-name">Languages</h3>
           <span class="skill-pill">Python</span>
+          <span class="skill-pill">LaTeX</span>
+          <span class="skill-pill">C</span>
+          <span class="skill-pill">C++</span>
           <span class="skill-pill">Java</span>
-          <span class="skill-pill">C / C++</span>
           <span class="skill-pill">JavaScript</span>
           <span class="skill-pill">SQL</span>
         </div>
         <div class="skill-card card reveal reveal-d3">
           <h3 class="skill-name">Web & APIs</h3>
-          <span class="skill-pill">React</span>
+          <span class="skill-pill">React.js</span>
           <span class="skill-pill">Node.js</span>
-          <span class="skill-pill">Express</span>
-          <span class="skill-pill">REST</span>
-          <span class="skill-pill">HTML / CSS</span>
+          <span class="skill-pill">Express.js</span>
+          <span class="skill-pill">REST APIs</span>
+          <span class="skill-pill">HTML5 / CSS3</span>
+          <span class="skill-pill">Tailwind CSS</span>
         </div>
         <div class="skill-card card reveal reveal-d1">
           <h3 class="skill-name">Cybersecurity</h3>
           <span class="skill-pill">Nmap</span>
           <span class="skill-pill">Wireshark</span>
+          <span class="skill-pill">Network Scanning</span>
           <span class="skill-pill">Vulnerability Assessment</span>
-          <span class="skill-pill">Pen Testing</span>
-          <span class="skill-pill">Secure Design</span>
+          <span class="skill-pill">Basic Ethical Hacking</span>
         </div>
         <div class="skill-card card reveal reveal-d2">
-          <h3 class="skill-name">AI / Data</h3>
+          <h3 class="skill-name">Data Science / AI</h3>
           <span class="skill-pill">Pandas</span>
           <span class="skill-pill">NumPy</span>
+          <span class="skill-pill">Matplotlib</span>
           <span class="skill-pill">Scikit-learn</span>
-          <span class="skill-pill">ML Pipelines</span>
-          <span class="skill-pill">Data Analysis</span>
         </div>
         <div class="skill-card card reveal reveal-d3">
           <h3 class="skill-name">Databases</h3>
           <span class="skill-pill">PostgreSQL</span>
-          <span class="skill-pill">Neon</span>
-          <span class="skill-pill">MongoDB</span>
-          <span class="skill-pill">Redis</span>
+          <span class="skill-pill">Neon SQL</span>
         </div>
         <div class="skill-card card reveal reveal-d1">
-          <h3 class="skill-name">Tools</h3>
+          <h3 class="skill-name">Developer Tools</h3>
           <span class="skill-pill">Git</span>
           <span class="skill-pill">GitHub</span>
-          <span class="skill-pill">VS Code</span>
+          <span class="skill-pill">Visual Studio Code</span>
           <span class="skill-pill">Linux</span>
-          <span class="skill-pill">Docker</span>
+          <span class="skill-pill">Overleaf</span>
+          <span class="skill-pill">VMware</span>
+          <span class="skill-pill">MATLAB</span>
+          <span class="skill-pill">Vercel</span>
+          <span class="skill-pill">Netlify</span>
         </div>
       </div>
     </div>
@@ -536,9 +540,12 @@
           <p class="timeline-org">Samsung</p>
           <div class="timeline-body">
             <ul>
-              <li>Completed an intensive AI-focused training curriculum with practical model implementation.</li>
-              <li>Built intelligent applications using modern data workflows and cloud-ready patterns.</li>
+              <li>Completed intensive AI/ML training covering machine learning algorithms, model development, and intelligent system design.</li>
             </ul>
+            <a class="certificate-link" href="certificate/Samsung Innovation Campus.jpeg" target="_blank">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              View Certificate
+            </a>
           </div>
         </article>
         <article class="timeline-item reveal reveal-d2">
@@ -548,9 +555,18 @@
           <p class="timeline-org">InternPe</p>
           <div class="timeline-body">
             <ul>
-              <li>Delivered multiple Python applications including games, automation scripts, and algorithm exercises.</li>
-              <li>Strengthened fundamentals in object-oriented design, data structures, and debugging.</li>
+              <li>Gained proficiency in Python programming through the creation of projects like digital clocks, Tic Tac Toe, Snake Game, and Connect Four games, using various data structures and algorithms.</li>
             </ul>
+            <div style="display: flex; gap: 1.25rem; flex-wrap: wrap;">
+              <a class="certificate-link" href="certificate/Internpe internship completion certificates.jpeg" target="_blank">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                View Certificate
+              </a>
+              <a class="certificate-link" href="Achievments/letter of Recommendation Internpe.jpeg" target="_blank">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Letter of Rec
+              </a>
+            </div>
           </div>
         </article>
         <article class="timeline-item reveal reveal-d3">
@@ -560,9 +576,12 @@
           <p class="timeline-org">Acemegrade</p>
           <div class="timeline-body">
             <ul>
-              <li>Practiced network analysis with Nmap and packet inspection using Wireshark.</li>
-              <li>Completed vulnerability assessments and introductory penetration testing exercises.</li>
+              <li>Performed network scanning (Nmap), reconnaissance (Wappylyzer/Netcraft), packet analysis (Wireshark), and basic penetration testing including DoS simulations and payload building.</li>
             </ul>
+            <a class="certificate-link" href="Achievments/Certificate of Training completion -acemegrade.jpeg" target="_blank">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              View Certificate
+            </a>
           </div>
         </article>
       </div>
@@ -577,46 +596,75 @@
       <h2 class="section-title reveal">Recent work.</h2>
       <div class="projects-grid">
         <article class="project-card card reveal reveal-d1">
-          <span class="project-label">Web App</span>
-          <h3 class="project-title">Secure SaaS Dashboard</h3>
-          <p class="project-desc">A full-stack SaaS interface with secure authentication, subscription management, and polished data visualization.</p>
+          <span class="project-label">Web App · Deployed</span>
+          <h3 class="project-title">Automated Mailing Platform</h3>
+          <p class="project-desc">A full-stack bulk-email system that successfully sent 1,000+ emails with high deliverability.</p>
+          <ul class="project-bullets">
+            <li>Developed RESTful APIs for user authentication, email template management, and automated campaign flows.</li>
+            <li>Designed and implemented a secure PostgreSQL schema to store user data, email templates and mailing logs.</li>
+            <li>Built scalable campaign-automation engine, decreasing manual effort for mass communication by 80%.</li>
+          </ul>
           <div class="project-tags">
-            <span class="project-tag">React</span>
+            <span class="project-tag">React.js</span>
             <span class="project-tag">Node.js</span>
-            <span class="project-tag">PostgreSQL</span>
+            <span class="project-tag">Express.js</span>
+            <span class="project-tag">PostgreSQL (Neon)</span>
+            <span class="project-tag">EmailJS</span>
+            <span class="project-tag">REST APIs</span>
           </div>
-          <a class="project-link" href="https://github.com/gk-girishkumar" target="_blank">View on GitHub</a>
+          <a class="project-link" href="https://github.com/gk-girishkumar/Automated-mailing-system" target="_blank">View on GitHub</a>
         </article>
         <article class="project-card card reveal reveal-d2">
-          <span class="project-label">AI / ML</span>
-          <h3 class="project-title">Live Translation Tool</h3>
-          <p class="project-desc">A real-time translator with voice support and intelligent text handling for smoother cross-language workflows.</p>
+          <span class="project-label">Web App</span>
+          <h3 class="project-title">Full-Stack SaaS Web Application - Student Toolkit</h3>
+          <p class="project-desc">A production SaaS platform, currently supporting 100+ active users with features from study utilities to productivity tools.</p>
+          <ul class="project-bullets">
+            <li>Developed RESTful APIs for user authentication, template management, and campaign flows.</li>
+            <li>Designed and implemented secure PostgreSQL schemas to store user data and mailing logs.</li>
+            <li>Integrated Clerk for authentication, billing and subscription management to enable a seamless user onboarding flow.</li>
+          </ul>
           <div class="project-tags">
-            <span class="project-tag">Python</span>
-            <span class="project-tag">APIs</span>
-            <span class="project-tag">TTS</span>
+            <span class="project-tag">React.js</span>
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">Express.js</span>
+            <span class="project-tag">PostgreSQL (Neon)</span>
+            <span class="project-tag">Clerk</span>
           </div>
-          <a class="project-link" href="https://github.com/gk-girishkumar" target="_blank">View on GitHub</a>
+          <a class="project-link" href="https://github.com/gk-girishkumar/Student-Toolkit" target="_blank">View on GitHub</a>
         </article>
         <article class="project-card card reveal reveal-d3">
-          <span class="project-label">Embedded</span>
-          <h3 class="project-title">Obstacle Avoiding Robo Car</h3>
-          <p class="project-desc">Custom autonomous vehicle prototype with ultrasonic sensing, wireless control, and manual override.</p>
+          <span class="project-label">AI / ML</span>
+          <h3 class="project-title">AI-Based Live Translation and Text-to-Speech System</h3>
+          <p class="project-desc">A real-time translation and TTS application supporting 26+ languages with low-latency performance.</p>
+          <ul class="project-bullets">
+            <li>Built a real-time language translation and TTS application supporting 26+ languages.</li>
+            <li>Developed third-party Translation and TTS APIs to enable accurate and low-latency language conversion.</li>
+            <li>Developed an accessible, intuitive UI that emphasized real-time interaction and usability to a broad scope of users.</li>
+          </ul>
           <div class="project-tags">
-            <span class="project-tag">Arduino</span>
-            <span class="project-tag">C++</span>
-            <span class="project-tag">ESP</span>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">APIs</span>
+            <span class="project-tag">Translation</span>
+            <span class="project-tag">TTS</span>
           </div>
-          <a class="project-link" href="https://github.com/gk-girishkumar" target="_blank">View on GitHub</a>
+          <a class="project-link" href="https://github.com/gk-girishkumar/AI-Based-Live-Translation-and-Text-to-Speech-System" target="_blank">View on GitHub</a>
         </article>
         <article class="project-card card reveal reveal-d1">
-          <span class="project-label">Security</span>
-          <h3 class="project-title">Cyber Incident Tracker</h3>
-          <p class="project-desc">A monitoring dashboard for logging security events, tracking remediation, and visualizing risk trends.</p>
+          <span class="project-label">Embedded / Hardware</span>
+          <h3 class="project-title">Obstacle Avoiding Robo Car</h3>
+          <p class="project-desc">An intelligent robotic vehicle capable of switching between autonomous and manual controls.</p>
+          <ul class="project-bullets">
+            <li>Developed an intelligent robotic vehicle with the ability to switch between autonomous and manual controls based on wireless technology of ESP32.</li>
+            <li>Ensured 100% accuracy in detecting obstacles through use of ultrasonic sensors.</li>
+            <li>Created an LED feedback system to indicate movement and status of the robot.</li>
+            <li>Merged both hardware and firmware technologies to allow switching between autonomous and manual modes.</li>
+          </ul>
           <div class="project-tags">
-            <span class="project-tag">JavaScript</span>
-            <span class="project-tag">Security</span>
-            <span class="project-tag">Dashboard</span>
+            <span class="project-tag">Embedded C/C++</span>
+            <span class="project-tag">Arduino</span>
+            <span class="project-tag">ESP32 Module</span>
+            <span class="project-tag">Ultrasonic Sensors</span>
           </div>
           <a class="project-link" href="https://github.com/gk-girishkumar" target="_blank">View on GitHub</a>
         </article>
@@ -632,22 +680,22 @@
       <h2 class="section-title reveal">Academic path.</h2>
       <div class="education-grid">
         <article class="edu-card card reveal reveal-d1">
-          <span class="edu-badge">Current</span>
-          <h3 class="edu-degree">B.Tech — Computer Science</h3>
+          <span class="edu-badge">University</span>
+          <h3 class="edu-degree">Bachelor of Technology (Computer Science)</h3>
           <p class="edu-institution">Amity University Haryana</p>
           <p class="edu-period">2023 – 2027 · Gurugram, Haryana</p>
         </article>
         <article class="edu-card card reveal reveal-d2">
           <span class="edu-badge">School</span>
-          <h3 class="edu-degree">Senior Secondary — Science</h3>
+          <h3 class="edu-degree">Senior Secondary Education (Science)</h3>
           <p class="edu-institution">Baba Rupadas School</p>
           <p class="edu-period">2021 – 2022 · Buhana, Rajasthan</p>
         </article>
         <article class="edu-card card reveal reveal-d3">
-          <span class="edu-badge">Certification</span>
+          <span class="edu-badge">Additional Education</span>
           <h3 class="edu-degree">Python Programming</h3>
           <p class="edu-institution">Coursera</p>
-          <p class="edu-period">Object-oriented programming, automation, and data analysis</p>
+          <p class="edu-period">Gained strong problem-solving abilities and the confidence to write effective code covering fundamental concepts, OOP, data handling, and real-world applications like automation and data analysis.</p>
         </article>
       </div>
     </div>
@@ -662,31 +710,58 @@
       <div class="achievement-grid">
         <article class="achievement-card card reveal reveal-d1">
           <div class="achievement-header">
-            <span class="achievement-title">Foundations of Cybersecurity</span>
-            <span class="achievement-date">Apr 2026</span>
+            <span class="achievement-title">Foundation of Cybersecurity</span>
+            <span class="achievement-date">Apr 9, 2026</span>
           </div>
-          <p class="achievement-org">Google</p>
+          <p class="achievement-org">Google / Coursera</p>
+          <a class="certificate-link" href="certificate/Foundation of cybersecurity -google.jpeg" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            View Certificate
+          </a>
         </article>
         <article class="achievement-card card reveal reveal-d2">
           <div class="achievement-header">
-            <span class="achievement-title">Samsung Innovation Campus — AI</span>
-            <span class="achievement-date">Mar 2026</span>
+            <span class="achievement-title">Cyber Job Simulation — Cybersecurity</span>
+            <span class="achievement-date">Jul 7, 2025</span>
           </div>
-          <p class="achievement-org">Samsung</p>
+          <p class="achievement-org">Deloitte Australia / Forage</p>
+          <a class="certificate-link" href="Achievments/Cyber job Simulation -Deloitte.jpeg" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            View Certificate
+          </a>
         </article>
         <article class="achievement-card card reveal reveal-d3">
           <div class="achievement-header">
-            <span class="achievement-title">Cyber Job Simulation</span>
-            <span class="achievement-date">Jul 2025</span>
+            <span class="achievement-title">Artificial Intelligence</span>
+            <span class="achievement-date">Nov 2025 – Mar 2026</span>
           </div>
-          <p class="achievement-org">Deloitte / Forage</p>
+          <p class="achievement-org">Samsung Innovation Campus</p>
+          <a class="certificate-link" href="certificate/Samsung Innovation Campus.jpeg" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            View Certificate
+          </a>
         </article>
         <article class="achievement-card card reveal reveal-d1">
           <div class="achievement-header">
-            <span class="achievement-title">Microsoft Learn Student Ambassador</span>
+            <span class="achievement-title">Web Development — Learn Student Ambassador Bootcamp</span>
             <span class="achievement-date">Apr 2024</span>
           </div>
           <p class="achievement-org">Microsoft</p>
+          <a class="certificate-link" href="certificate/Microsoft Learn Student Ambassador.jpeg" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            View Certificate
+          </a>
+        </article>
+        <article class="achievement-card card reveal reveal-d2">
+          <div class="achievement-header">
+            <span class="achievement-title">Cybersecurity Training Completion</span>
+            <span class="achievement-date">Apr – May 2024</span>
+          </div>
+          <p class="achievement-org">Acemegrade & IIT Bombay Mood Indigo</p>
+          <a class="certificate-link" href="Achievments/Certificate of Training completion -acemegrade.jpeg" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            View Certificate
+          </a>
         </article>
       </div>
     </div>
@@ -700,18 +775,18 @@
       <h2 class="section-title reveal">Communication fluency.</h2>
       <div class="language-grid">
         <div class="language-card card reveal reveal-d1">
-          <div class="language-name"><span>Hindi</span><span>Native</span></div>
+          <div class="language-name"><span>Hindi Language</span><span>Native</span></div>
           <div class="language-bar"><div class="language-fill" style="width: 100%;"></div></div>
           <p class="language-level">Native speaker</p>
         </div>
         <div class="language-card card reveal reveal-d2">
-          <div class="language-name"><span>English</span><span>Advanced</span></div>
+          <div class="language-name"><span>English Language</span><span>C1 Level</span></div>
           <div class="language-bar"><div class="language-fill" style="width: 92%;"></div></div>
           <p class="language-level">Advanced professional fluency</p>
         </div>
         <div class="language-card card reveal reveal-d3">
-          <div class="language-name"><span>Japanese</span><span>B2</span></div>
-          <div class="language-bar"><div class="language-fill" style="width: 68%;"></div></div>
+          <div class="language-name"><span>Japanese Language</span><span>B2 (In Progress)</span></div>
+          <div class="language-bar"><div class="language-fill" style="width: 75%;"></div></div>
           <p class="language-level">Intermediate working proficiency</p>
         </div>
       </div>
